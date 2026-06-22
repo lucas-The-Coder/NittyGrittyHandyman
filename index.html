@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="The Nitty Gritty Handyman - Professional handyman, custom steelwork, fencing, and repair services in Johannesburg and Gauteng. Free quotes, reliable service, no job too small.">
+    <title>The Nitty Gritty Handyman | Professional Services Johannesburg & Gauteng</title>
+    <!-- Google Material Icons & Font Awesome (for value props) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* DESIGN SYSTEM */
+        :root {
+            --text-color: #6b6375;
+            --heading-color: #08060d;
+            --bg-color: #ffffff;
+            --border-color: #e5e4e7;
+            --code-bg: #f4f3ec;
+            --accent: #3b82f6;
+            --accent-dark: #1e3a8a;
+            --accent-bg: #3b82f61a;
+            --accent-border: #3b82f680;
+            --social-bg: #f4f3ec80;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #9ca3af;
+                --heading-color: #f3f4f6;
+                --bg-color: #16171d;
+                --border-color: #2e303a;
+                --code-bg: #1f2028;
+                --accent: #60a5fa;
+                --accent-dark: #1e40af;
+                --accent-bg: #60a5fa26;
+                --accent-border: #60a5fa80;
+                --social-bg: #2f303a80;
+                --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            line-height: 145%;
+            letter-spacing: 0.18px;
+            text-rendering: optimizelegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-synthesis: none;
+        }
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 1126px;
+            max-width: 100%;
+            min-height: 100svh;
+            margin: 0 auto;
+            border-inline: 1px solid transparent;
+            box-sizing: border-box;
+            background-color: var(--bg-color);
+            position: relative;
+        }
+
+        .app-content {
+            text-align: left;
+            flex: 1;
+            padding: 1.5rem 2rem 2.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            body { font-size: 16px; }
+            .app-content { padding: 1.25rem 1.5rem 2rem; }
+        }
+
+        h1 {
+            font-size: 56px;
+            letter-spacing: -1.68px;
+            margin: 32px 0 20px;
+            font-weight: 700;
+            color: var(--heading-color);
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+            margin: 0 0 8px;
+            line-height: 118%;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+        p { margin-bottom: 1rem; }
+        a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.8; }
+
+        button, .btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+        button:hover, .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 8px 20px rgba(59,130,246,0.25);
+        }
+
+        .grid-2, .grid-3 {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .grid-3 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        .grid-2 { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+        .card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 1.8rem;
+            transition: all 0.2s ease;
+            box-shadow: var(--card-shadow);
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-border); }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .service-list li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .service-list li::before {
+            content: "▹";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1rem 0;
+        }
+        .badge {
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            color: var(--accent);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .badge .material-icons { font-size: 16px; }
+
+        .value-prop-card { text-align: center; }
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            display: inline-block;
+        }
+        .value-prop-card h3 { margin-top: 0.5rem; margin-bottom: 0.75rem; }
+        .value-prop-card p { margin-top: 0.5rem; }
+
+        .contact-info {
+            background: var(--code-bg);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            background: var(--bg-color);
+        }
+        .hero-section { text-align: center; margin-bottom: 2rem; }
+        .section-title { text-align: center; margin-bottom: 2rem; }
+        .inline-highlight { color: var(--accent); font-weight: 600; }
+
+        @media (max-width: 680px) {
+            h1 { font-size: 36px; margin: 20px 0; }
+            h2 { font-size: 20px; }
+            .card { padding: 1.2rem; }
+            .app-content { padding: 1rem 1.2rem 1.8rem; }
+            .value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        }
+        .inline-icon {
+            font-size: 1.2rem;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+        button .material-icons { font-size: 1.2rem; }
+        .steel-highlight {
+            background: linear-gradient(135deg, var(--accent-bg) 0%, var(--bg-color) 100%);
+            border-left: 5px solid var(--accent);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--accent);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            border: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            background-color: var(--accent-dark);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 42px;
+                height: 42px;
+            }
+        }
+
+        /* Bottom CTA bar - cleaner design */
+        .bottom-cta {
+            text-align: center;
+            background: var(--accent-bg);
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0 0.5rem;
+            border: 1px solid var(--accent-border);
+        }
+        .bottom-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+        }
+        .bottom-cta p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+    </style>
+    <!-- React & ReactDOM & Babel -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    
+    const servicesData = [
+        {
+            id: 1,
+            title: "General Maintenance & Repairs",
+            icon: "build",
+            description: "Indoor & outdoor maintenance for homes and offices  from leaky taps to broken doors, we handle it all.",
+            details: ["Plumbing repairs", "Doors & Windows work", "Tiling services", "Painting services"],
+            tagline: "From leaky taps to broken doors, we handle it all"
+        },
+        {
+            id: 2,
+            title: "Custom Steel & Stainless Steel Work",
+            icon: "handyman",
+            description: "Precision fabrication & custom metalwork built to your specifications. Bespoke projects with expert welding.",
+            details: ["Fabrication", "Welding", "Stainless Steel work", "Custom Builds (staircases, gates, braai stands, frames)"],
+            examples: "Staircases, gates, braai stands, custom steelwork"
+        },
+        {
+            id: 3,
+            title: "Fencing",
+            icon: "fence",
+            description: "Full fencing installations for residential & commercial properties. Professional security solutions.",
+            details: ["Palisade fencing", "Concrete Poles installation", "Security Fencing", "Boundary Walls"]
+        },
+        {
+            id: 4,
+            title: "Installations",
+            icon: "plumbing",
+            description: "Professional fixture & structure installation  done right the first time.",
+            details: ["Fixtures installation", "Structures assembly", "Fittings & hardware installation"]
+        },
+        {
+            id: 5,
+            title: "Home & Office Repairs",
+            icon: "home_repair_service",
+            description: "Comprehensive repair services for residential & commercial spaces. No job too small, emergency repairs available.",
+            details: ["Residential repairs", "Commercial repairs", "Emergency Repairs", "Renovations"]
+        },
+        {
+            id: 6,
+            title: "Outdoor Structures",
+            icon: "grass",
+            description: "Durable outdoor features designed to enhance your property and withstand the elements.",
+            details: ["Pergolas", "Carports", "Stoeps (covered patios)", "Paving"]
+        }
+    ];
+
+    const valueProps = [
+        { title: "Quality Work", desc: "Every job done with pride and precision. Craftsmanship & attention to detail guaranteed.", iconClass: "fas fa-medal" },
+        { title: "Reliable", desc: "We show up on time, every time. Professional and trustworthy service delivery.", iconClass: "fas fa-handshake" },
+        { title: "Fair Pricing", desc: "Transparent pricing model, no hidden surprises. Free quotes offered to all customers.", iconClass: "fas fa-tag" },
+        { title: "Experienced", desc: "Years of hands-on trade expertise. Skilled workforce with proven track record.", iconClass: "fas fa-briefcase" }
+    ];
+
+    const keywords = ["Serving Johannesburg & Gauteng", "Quality Work", "Fair Pricing", "Reliable & On Time", "Free Quotes", "Professional Installations", "Custom Builds", "No Job Too Small"];
+
+    // WhatsApp configuration 
+    const WHATSAPP_NUMBER = "27720438903";  
+    const WHATSAPP_MESSAGE = encodeURIComponent("Hello The Nitty Gritty Handyman! I would like to request a FREE QUOTE for your handyman services (repairs, steelwork, fencing, installations, etc.). Please could you assist me? Thank you!");
+    const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+    const openWhatsApp = () => window.open(WHATSAPP_LINK, '_blank', 'noopener,noreferrer');
+
+    const MaterialIcon = ({ name, className = "" }) => <span className={`material-icons ${className}`}>{name}</span>;
+
+    // Back to Top Button Component
+    const BackToTopButton = () => {
+        const [isVisible, setIsVisible] = React.useState(false);
+
+        React.useEffect(() => {
+            const toggleVisibility = () => {
+                if (window.scrollY > 300) {
+                    setIsVisible(true);
+                } else {
+                    setIsVisible(false);
+                }
+            };
+            window.addEventListener('scroll', toggleVisibility);
+            return () => window.removeEventListener('scroll', toggleVisibility);
+        }, []);
+
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        return (
+            <button 
+                className={`back-to-top ${isVisible ? 'visible' : ''}`}
+                onClick={scrollToTop}
+                aria-label="Back to top"
+            >
+                <MaterialIcon name="arrow_upward" />
+            </button>
+        );
+    };
+
+    // Single page component: all sections in one flow, only two quote buttons (top + bottom)
+    const SinglePage = () => {
+        return (
+            <div>
+                {/* Hero Section with TOP quote button */}
+                <div className="hero-section">
+                    <h1>The Nitty Gritty Handyman</h1>
+                    <p style={{ fontSize: "1.2rem", maxWidth: "800px", margin: "0 auto 1.2rem" }}>
+                        Professional maintenance, custom metalwork, fencing & installations  serving <span className="inline-highlight">Johannesburg & Gauteng</span>.
+                    </p>
+                    <div className="badge-container" style={{ justifyContent: "center" }}>
+                        {keywords.slice(0, 5).map(kw => <span key={kw} className="badge">{kw}</span>)}
+                    </div>
+                    <button onClick={openWhatsApp} style={{ marginTop: "1rem" }}>
+                        <MaterialIcon name="chat" /> Get your free quote →
+                    </button>
+                </div>
+
+                {/* Value Propositions */}
+                <div className="section-title">
+                    <h2>Why choose us?</h2>
+                    <p>Our core promises to every client across Johannesburg & Gauteng</p>
+                </div>
+                <div className="grid-3">
+                    {valueProps.map(vp => (
+                        <div key={vp.title} className="card value-prop-card">
+                            <i className={`${vp.iconClass} value-icon`} aria-hidden="true"></i>
+                            <h3>{vp.title}</h3>
+                            <p>{vp.desc}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Services Highlights (first 4) */}
+                <div className="section-title">
+                    <h2>Services we excel at</h2>
+                    <p>Comprehensive solutions  residential & commercial</p>
+                </div>
+                <div className="grid-2">
+                    {servicesData.slice(0, 4).map(service => (
+                        <div key={service.id} className="card">
+                            <div className="service-icon"><MaterialIcon name={service.icon} style={{ fontSize: "2.5rem" }} /></div>
+                            <h3>{service.title}</h3>
+                            <p>{service.description.substring(0, 100)}...</p>
+                            <ul className="service-list">
+                                {service.details.slice(0, 2).map((item, idx) => <li key={idx}>{item}</li>)}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Full Services List (all 6) */}
+                <div className="section-title">
+                    <h2>All Services</h2>
+                    <p>Expert craftsmanship across six core categories</p>
+                </div>
+                <div className="grid-2">
+                    {servicesData.map(service => (
+                        <div key={service.id} className="card">
+                            <div className="service-icon"><MaterialIcon name={service.icon} style={{ fontSize: "2.5rem" }} /></div>
+                            <h3>{service.title}</h3>
+                            <p>{service.description}</p>
+                            <ul className="service-list">
+                                {service.details.map((item, idx) => <li key={idx}>{item}</li>)}
+                            </ul>
+                            {service.examples && <p style={{ marginTop: "0.5rem", fontStyle: "italic", color: "var(--accent)" }}> {service.examples}</p>}
+                            {service.tagline && <div className="badge" style={{ display: "inline-block", marginTop: "0.6rem" }}>{service.tagline}</div>}
+                        </div>
+                    ))}
+                </div>
+                <div className="badge-container" style={{ justifyContent: "center", margin: "1rem 0" }}>
+                    <span className="badge"><MaterialIcon name="check_circle" /> Free Quotes</span>
+                    <span className="badge"><MaterialIcon name="handyman" /> Professional Installations</span>
+                    <span className="badge"><MaterialIcon name="hourglass_empty" /> No Job Too Small</span>
+                    <span className="badge"><MaterialIcon name="precision_manufacturing" /> Custom Builds</span>
+                </div>
+
+                {/* About Section */}
+                <div className="section-title" style={{ marginTop: "2rem" }}>
+                    <h2>About The Nitty Gritty Handyman</h2>
+                    <p>Dedicated to quality, reliability, and fair service since day one.</p>
+                </div>
+                <div className="card" style={{ marginBottom: "2rem" }}>
+                    <h3><MaterialIcon name="location_on" /> Locally rooted in Gauteng</h3>
+                    <p>We are a Johannesburg-based handyman and custom metalwork business serving residential and commercial clients across Gauteng. From small household fixes to large-scale steel fabrication, we bring precision, integrity, and a can-do attitude to every project.</p>
+                    <p><strong>Our mission:</strong> To provide world-class maintenance, repair, and custom fabrication with transparent pricing and unmatched reliability  ensuring every client feels like a priority.</p>
+                </div>
+                <div className="grid-2">
+                    <div className="card">
+                        <h3><MaterialIcon name="lightbulb" /> Our Philosophy</h3>
+                        <p>"No job too small"  we treat every task with the same level of dedication. Whether it's a leaky faucet or a custom steel staircase, we take pride in delivering <strong>Quality Work</strong> that lasts.</p>
+                        <p><MaterialIcon name="check" /> Free quotes • <MaterialIcon name="schedule" /> Punctuality • <MaterialIcon name="price_check" /> Transparent pricing</p>
+                    </div>
+                    <div className="card">
+                        <h3><MaterialIcon name="military_tech" /> Expertise & Certifications</h3>
+                        <p>Years of hands-on experience in welding, fabrication, general maintenance, fencing, and installations. Our skilled team stays updated with best practices to serve Johannesburg and Gauteng effectively.</p>
+                        <p><MaterialIcon name="build" /> Specialties: Custom steelwork, stainless steel, palisade fencing, outdoor structures, and emergency repairs.</p>
+                    </div>
+                </div>
+                
+                {/* Geographic info without any button */}
+                <div className="contact-info" style={{ textAlign: "center" }}>
+                    <h3><MaterialIcon name="public" /> Serving Johannesburg & Gauteng Province</h3>
+                    <p>From Sandton to Soweto, Pretoria to the East Rand  we cover the entire region with prompt, professional service. Contact us for a free, no-obligation quote today.</p>
+                    <div className="badge-container" style={{ justifyContent: "center" }}>
+                        <span className="badge"><MaterialIcon name="rocket_launch" /> Reliable & On Time</span>
+                        <span className="badge"><MaterialIcon name="attach_money" /> Fair Pricing</span>
+                        <span className="badge"><MaterialIcon name="engineering" /> Experienced Team</span>
+                    </div>
+                    {/* Button removed - only top and bottom remain */}
+                </div>
+
+                {/* Custom Steelworks section - icons removed from the three badges as requested */}
+                <div className="steel-highlight card" style={{ margin: "2rem 0 1rem", textAlign: "center", backgroundColor: "var(--accent-bg)", borderLeft: "5px solid var(--accent)" }}>
+                    <MaterialIcon name="handyman" style={{ fontSize: "3rem", color: "var(--accent)", marginBottom: "0.5rem" }} />
+                    <h3>Premium Custom Steel & Stainless Steel Work</h3>
+                    <p>From staircases and security gates to braai stands and industrial frames – we fabricate exactly what you need. Our expert welders deliver precision, durability, and beautiful finishes.</p>
+                    <div className="badge-container" style={{ justifyContent: "center" }}>
+                        {/* Icons removed: only text remains */}
+                        <span className="badge">Bespoke Designs</span>
+                        <span className="badge">On‑site Welding</span>
+                        <span className="badge">Structural Steel</span>
+                    </div>
+                    {/* No button here - only bottom CTA will have one */}
+                </div>
+
+                {/* Clean Bottom CTA with the only bottom quote button */}
+                <div className="bottom-cta">
+                    <h3>Ready to get started?</h3>
+                    <p>Request your free, no-obligation quote today. We respond quickly and serve all of Gauteng.</p>
+                    <button onClick={openWhatsApp} style={{ marginTop: "0.5rem" }}>
+                        <MaterialIcon name="chat" /> Get your free quote →
+                    </button>
+                </div>
+            </div>
+        );
+    };
+
+    // Main App Component (single page, no tabs, with BackToTopButton)
+    const App = () => {
+        return (
+            <>
+                <main className="app-content">
+                    <SinglePage />
+                </main>
+                <footer>
+                    <p>© {new Date().getFullYear()} The Nitty Gritty Handyman  Professional handyman & custom metalwork | Johannesburg & Gauteng, South Africa</p>
+                    <p style={{ marginTop: "0.5rem" }}><MaterialIcon name="location_on" style={{ fontSize: "1rem" }} /> Serving Gauteng Province • Free quotes • Reliable & on time • No job too small</p>
+                    <div className="badge-container" style={{ justifyContent: "center", marginTop: "0.8rem" }}>
+                        <span className="badge"><MaterialIcon name="call" /> +27 72 043 8903</span>
+                        {/* REPLACE EMAIL BELOW WITH ACTUAL BUSINESS EMAIL */}
+                        <span className="badge"><MaterialIcon name="email" /> info@nittygrittyhandyman.co.za</span>  {/* ← CHANGE TO REAL EMAIL */}
+                        {/* Small WhatsApp button removed - only top and bottom remain */}
+                    </div>
+                    <p style={{ marginTop: "1.5rem", fontSize: "0.75rem", opacity: 0.7 }}>
+                        Website by <a href="https://dennisys.co.za" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", textDecoration: "underline" }}>Dennisys (Pty) Ltd</a>
+                    </p>
+                </footer>
+                <BackToTopButton />
+            </>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
