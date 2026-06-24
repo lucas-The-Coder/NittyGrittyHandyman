@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Nitty Gritty Handyman | Johannesburg Handyman, Steelwork & Fencing | Free Quotes</title>
-<meta name="description" content="Professional handyman in Johannesburg & Gauteng. General maintenance, custom steel & stainless steel, fencing, installations. Free quotes - no call-out fee in JHB. Call +27 72 043 8903.">
+<meta name="description" content="Professional handyman in Johannesburg & Gauteng. General maintenance, custom steel & stainless steel, fencing, installations. Free quotes – no call-out fee in JHB. Call +27 72 043 8903.">
 <meta name="theme-color" content="#3b82f6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,6 @@
   --card:#ffffff;
   --shadow:0 10px 30px rgba(2,6,23,.06);
   --radius:24px;
-  --depth-1:0 2px 4px rgba(2,6,23,.08), 0 1px 2px rgba(2,6,23,.06);
-  --depth-2:0 10px 24px rgba(2,6,23,.10), 0 4px 8px rgba(2,6,23,.06);
-  --depth-3:0 22px 48px rgba(2,6,23,.16), 0 10px 20px rgba(2,6,23,.10);
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -35,9 +32,6 @@
     --border:#1e293b;
     --card:#101a2e;
     --shadow:0 10px 30px rgba(0,0,0,.45);
-    --depth-1:0 2px 4px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.4);
-    --depth-2:0 10px 24px rgba(0,0,0,.55), 0 4px 8px rgba(0,0,0,.4);
-    --depth-3:0 22px 48px rgba(0,0,0,.65), 0 10px 20px rgba(0,0,0,.5);
   }
 }
 *{box-sizing:border-box}
@@ -50,8 +44,6 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-  perspective:1200px;
-  perspective-origin:50% 0;
 }
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -75,9 +67,6 @@ img{max-width:100%}
   background:color-mix(in srgb, var(--bg) 80%, transparent);
   backdrop-filter:saturate(180%) blur(12px);
   border-bottom:1px solid var(--border);
-  box-shadow:0 6px 18px rgba(2,6,23,.06);
-  transform:translateZ(20px);
-  will-change:transform;
 }
 .head-inner{
   display:flex;align-items:center;justify-content:space-between;
@@ -100,33 +89,20 @@ img{max-width:100%}
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   min-height:44px;padding:10px 18px;border-radius:14px;font-weight:600;
   border:1px solid var(--border);background:var(--card);color:var(--text);
-  text-decoration:none;transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s, filter .18s;box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(0,0,0,.05);white-space:nowrap;
-  transform:translateZ(0);position:relative
+  text-decoration:none;transition:.18s;box-shadow:var(--shadow);white-space:nowrap
 }
-.btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:var(--depth-3), inset 0 1px 0 rgba(255,255,255,.12)}
-.btn:active{transform:translateY(1px);box-shadow:var(--depth-1), inset 0 2px 5px rgba(0,0,0,.18)}
-.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);box-shadow:0 10px 20px color-mix(in srgb, var(--accent) 30%, transparent), 0 3px 6px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 1px 0 rgba(255,255,255,.22), inset 0 -2px 4px rgba(0,0,0,.18)}
-.btn-primary:hover{filter:brightness(.97);box-shadow:0 14px 28px color-mix(in srgb, var(--accent) 35%, transparent), 0 6px 12px color-mix(in srgb, var(--accent) 30%, transparent), inset 0 1px 0 rgba(255,255,255,.24)}
-.btn-primary:active{box-shadow:0 4px 10px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 2px 4px rgba(0,0,0,.25)}
+.btn:hover{transform:translateY(-1px);text-decoration:none}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn-primary:hover{filter:brightness(.96)}
 .btn-secondary{background:var(--bg-elev)}
 .btn-lg{padding:14px 24px;font-size:17px;min-height:52px;border-radius:16px}
 .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;line-height:1}
 
 /* Hero */
-.hero{padding:88px 0 64px;text-align:center;position:relative;isolation:isolate}
-.hero::before{
-  content:"";position:absolute;inset:-20% -10% 0 -10%;
-  background:
-    radial-gradient(900px 420px at 50% -10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%),
-    radial-gradient(700px 340px at 85% 0%, color-mix(in srgb, #8b5cf6 16%, transparent), transparent 60%),
-    radial-gradient(600px 300px at 15% 5%, color-mix(in srgb, #06b6d4 14%, transparent), transparent 60%);
-  transform:translateZ(-40px);
-  z-index:-1;pointer-events:none;
-}
+.hero{padding:80px 0 56px;text-align:center}
 .eyebrow{
   display:inline-block;background:var(--bg-elev);border:1px solid var(--border);
-  padding:6px 12px;border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:16px;
-  box-shadow:var(--depth-1);transform:translateZ(4px)
+  padding:6px 12px;border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:16px
 }
 h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spacing:-.02em}
 .lead{font-size:clamp(17px,2.3vw,20px);color:var(--muted);max-width:740px;margin:0 auto 28px}
@@ -135,7 +111,7 @@ h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 .badge{
   display:inline-flex;align-items:center;gap:6px;padding:8px 12px;
   border:1px solid var(--border);border-radius:999px;background:var(--card);
-  font-size:14px;color:var(--muted);box-shadow:var(--depth-1)
+  font-size:14px;color:var(--muted)
 }
 .badge .material-symbols-outlined{font-size:18px;color:var(--accent)}
 .social-proof{font-size:14px;color:var(--muted)}
@@ -152,18 +128,15 @@ h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 
 .card{
   background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:26px;box-shadow:var(--depth-2);transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s cubic-bezier(.2,.7,.2,1);
-  transform-style:preserve-3d;will-change:transform
+  padding:26px;box-shadow:var(--shadow);transition:.18s
 }
-.card:hover{transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);box-shadow:var(--depth-3)}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(2,6,23,.10)}
 .card-icon{
   width:48px;height:48px;display:grid;place-items:center;
   background:color-mix(in srgb, var(--accent) 14%, transparent);
-  color:var(--accent);border-radius:14px;margin-bottom:14px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.15), inset 0 -2px 4px rgba(0,0,0,.08);
-  transform:translateZ(6px)
+  color:var(--accent);border-radius:14px;margin-bottom:14px
 }
-.card-icon .material-symbols-outlined{font-size:26px;text-shadow:0 1px 0 rgba(0,0,0,.18),0 2px 0 rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.16);transform:translateZ(8px)}
+.card-icon .material-symbols-outlined{font-size:26px}
 .card h3{margin:0 0 6px;font-size:20px}
 .card p{margin:0 0 12px;color:var(--muted)}
 .card ul{margin:0;padding-left:18px}
@@ -173,8 +146,7 @@ h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 .four{grid-template-columns:1fr}
 @media(min-width:700px){.four{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.four{grid-template-columns:repeat(4,1fr)}}
-.why{text-align:center;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--depth-2);transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s;transform-style:preserve-3d}
-.why:hover{transform:translateY(-6px) rotateX(2deg);box-shadow:var(--depth-3)}
+.why{text-align:center;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
 .why .material-symbols-outlined{font-size:32px;color:var(--accent)}
 .why h3{margin:10px 0 6px;font-size:18px}
 .why p{margin:0;color:var(--muted);font-size:15px}
@@ -182,13 +154,11 @@ h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 /* How */
 .steps{display:grid;gap:18px;margin-top:32px}
 @media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
-.step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center;position:relative;box-shadow:var(--depth-2);transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s;transform-style:preserve-3d}
-.step:hover{transform:translateY(-6px) rotateX(2deg) rotateY(-1deg);box-shadow:var(--depth-3)}
+.step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center;position:relative;box-shadow:var(--shadow)}
 .step .num{
   position:absolute;top:-12px;left:50%;transform:translateX(-50%);
   background:var(--accent);color:var(--accent-ink);width:30px;height:30px;
-  border-radius:999px;display:grid;place-items:center;font-weight:700;font-size:14px;
-  box-shadow:0 4px 8px color-mix(in srgb, var(--accent) 40%, transparent), inset 0 1px 0 rgba(255,255,255,.3)
+  border-radius:999px;display:grid;place-items:center;font-weight:700;font-size:14px
 }
 .step .material-symbols-outlined{font-size:30px;color:var(--accent);margin:8px 0}
 .step h3{margin:6px 0 4px}
@@ -200,30 +170,27 @@ h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 .steel-inner{
   display:flex;flex-direction:column;gap:18px;align-items:flex-start;
   background:var(--card);border-radius:var(--radius);padding:28px;
-  position:relative;box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 2px rgba(0,0,0,.06);border:1px solid transparent;
-  transform-style:preserve-3d;transition:transform .3s, box-shadow .3s
+  position:relative;box-shadow:var(--shadow);border:1px solid transparent
 }
-.steel-inner:hover{transform:translateY(-4px);box-shadow:var(--depth-3), inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 2px rgba(0,0,0,.08)}
 .steel-inner::before{
   content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;
   background:linear-gradient(135deg,var(--accent),#8b5cf6 50%,#06b6d4);
   -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none
 }
-.steel-inner .material-symbols-outlined{font-size:38px;color:var(--accent);filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
+.steel-inner .material-symbols-outlined{font-size:38px;color:var(--accent)}
 .steel-inner h2{text-align:left;margin:0 0 6px}
 .steel-inner p{margin:0;color:var(--muted);max-width:60ch}
 @media(min-width:860px){.steel-inner{flex-direction:row;align-items:center}.steel-inner>div{flex:1}}
 
 /* Areas */
 .areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0}
-.areas span{padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:999px;font-size:14px;box-shadow:var(--depth-1)}
+.areas span{padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:999px;font-size:14px}
 .areas-note{text-align:center;color:var(--muted);font-size:14px}
 
 /* FAQ */
 .narrow{max-width:800px;margin:0 auto}
-details{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;margin:12px 0;box-shadow:var(--depth-1);transition:box-shadow .2s, transform .2s;transform-style:preserve-3d}
-details[open]{box-shadow:var(--depth-2);transform:translateY(-2px)}
+details{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;margin:12px 0;box-shadow:var(--shadow)}
 summary{
   cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;
   padding:18px 20px;min-height:44px
@@ -250,11 +217,9 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
 .mobile-bar{
   position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;padding:10px;
   background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);
-  border-top:1px solid var(--border);box-shadow:0 -12px 28px rgba(2,6,23,.14), 0 -4px 10px rgba(2,6,23,.08);
-  transform:translateZ(30px)
+  border-top:1px solid var(--border);box-shadow:0 -6px 24px rgba(0,0,0,.08)
 }
-.m-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid var(--border);box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.1);transition:transform .15s}
-.m-btn:active{transform:translateY(1px)}
+.m-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid var(--border)}
 .m-btn.call{background:var(--card);color:var(--text)}
 .m-btn.wa{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 @media(min-width:820px){.mobile-bar{display:none}.site-footer{padding-bottom:56px}}
@@ -263,9 +228,8 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
 .top-btn{
   position:fixed;right:18px;bottom:88px;z-index:70;width:48px;height:48px;border-radius:14px;
   display:grid;place-items:center;background:var(--card);border:1px solid var(--border);
-  box-shadow:var(--depth-2);color:var(--text);cursor:pointer;transition:transform .2s, box-shadow .2s
+  box-shadow:var(--shadow);color:var(--text);cursor:pointer
 }
-.top-btn:hover{transform:translateY(-2px);box-shadow:var(--depth-3)}
 .top-btn[hidden]{display:none}
 @media(min-width:820px){.top-btn{bottom:24px}}
 
@@ -482,7 +446,7 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
           <span class="num">2</span>
           <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
           <h3>Free Quote</h3>
-          <p>We assess and send a clear, fair price - no call-out fee in JHB.</p>
+          <p>We assess and send a clear, fair price — no call-out fee in JHB.</p>
         </div>
         <div class="step">
           <span class="num">3</span>
@@ -490,7 +454,6 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
           <h3>We Fix It</h3>
           <p>Professional job done right, with full clean-up after.</p>
         </div>
-      </div>
       <div class="how-cta">
         <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="btn btn-primary">Get Your Free Quote</a>
       </div>
@@ -523,7 +486,7 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
         <span>Soweto</span><span>Alberton</span><span>Germiston</span><span>Bedfordview</span><span>Edenvale</span>
         <span>Kempton Park</span><span>Benoni</span><span>Boksburg</span><span>Centurion</span><span>Pretoria East</span>
       </div>
-      <p class="areas-note">Don't see your suburb? <a href="tel:+27720438903">Call us</a> - we travel across Gauteng.</p>
+      <p class="areas-note">Don't see your suburb? <a href="tel:+27720438903">Call us</a> — we travel across Gauteng.</p>
     </div>
   </section>
 
@@ -534,12 +497,12 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
       
       <details>
         <summary>Do you charge a call-out fee in Johannesburg?</summary>
-        <p>No. Quotes are free with no call-out fee within Johannesburg. Outside JHB, a small travel fee may apply - we'll confirm upfront before booking.</p>
+        <p>No. Quotes are free with no call-out fee within Johannesburg. Outside JHB, a small travel fee may apply — we’ll confirm upfront before booking.</p>
       </details>
       
       <details>
         <summary>What areas do you cover?</summary>
-        <p>We're based in Johannesburg and work across Gauteng including Sandton, Randburg, Midrand, Roodepoort, Pretoria, and the East Rand. For other areas, please WhatsApp us.</p>
+        <p>We’re based in Johannesburg and work across Gauteng including Sandton, Randburg, Midrand, Roodepoort, Pretoria, and the East Rand. For other areas, please WhatsApp us.</p>
       </details>
       
       <details>
@@ -578,7 +541,7 @@ details p{color:var(--muted);margin:0;padding:0 20px 18px}
     </div>
     <div>
       <h4>Hours</h4>
-      <p>Mon-Fri: 08:00-17:00<br>Sat: 08:00-13:00<br>Sun: Closed</p>
+      <p>Mon–Fri: 08:00–17:00<br>Sat: 08:00–13:00<br>Sun: Closed</p>
     </div>
   </div>
   <div class="container foot-bottom">
