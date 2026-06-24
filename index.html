@@ -1,560 +1,708 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="The Nitty Gritty Handyman - Professional handyman, custom steelwork, fencing, and repair services in Johannesburg and Gauteng. Free quotes, reliable service, no job too small.">
-    <title>The Nitty Gritty Handyman | Professional Services Johannesburg & Gauteng</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --text-color: #6b6375;
-            --heading-color: #08060d;
-            --bg-color: #ffffff;
-            --border-color: #e5e4e7;
-            --code-bg: #f4f3ec;
-            --accent: #3b82f6;
-            --accent-dark: #1e3a8a;
-            --accent-bg: #3b82f61a;
-            --accent-border: #3b82f680;
-            --social-bg: #f4f3ec80;
-            --card-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nitty Gritty Handyman | Johannesburg Handyman, Steelwork & Fencing | Free Quotes</title>
+<meta name="description" content="Professional handyman in Johannesburg & Gauteng. General maintenance, custom steel & stainless steel, fencing, installations. Free quotes - no call-out fee in JHB. Call +27 72 043 8903.">
+<meta name="theme-color" content="#3b82f6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-color: #9ca3af;
-                --heading-color: #f3f4f6;
-                --bg-color: #16171d;
-                --border-color: #2e303a;
-                --code-bg: #1f2028;
-                --accent: #60a5fa;
-                --accent-dark: #1e40af;
-                --accent-bg: #60a5fa26;
-                --accent-border: #60a5fa80;
-                --social-bg: #2f303a80;
-                --card-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            }
-        }
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-elev:#f8fafc;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e2e8f0;
+  --accent:#3b82f6;
+  --accent-ink:#ffffff;
+  --card:#ffffff;
+  --shadow:0 10px 30px rgba(2,6,23,.06);
+  --radius:24px;
+  --depth-1:0 2px 4px rgba(2,6,23,.08), 0 1px 2px rgba(2,6,23,.06);
+  --depth-2:0 10px 24px rgba(2,6,23,.10), 0 4px 8px rgba(2,6,23,.06);
+  --depth-3:0 22px 48px rgba(2,6,23,.16), 0 10px 20px rgba(2,6,23,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0a0f1c;
+    --bg-elev:#0f172a;
+    --text:#e6eefc;
+    --muted:#9aa8bd;
+    --border:#1e293b;
+    --card:#101a2e;
+    --shadow:0 10px 30px rgba(0,0,0,.45);
+    --depth-1:0 2px 4px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.4);
+    --depth-2:0 10px 24px rgba(0,0,0,.55), 0 4px 8px rgba(0,0,0,.4);
+    --depth-3:0 22px 48px rgba(0,0,0,.65), 0 10px 20px rgba(0,0,0,.5);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  perspective:1500px;
+  perspective-origin:50% 0;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+img{max-width:100%}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+.particles{position:fixed;inset:0;z-index:-5;pointer-events:none;transform:translateZ(-250px);opacity:.55}
+.particles i{position:absolute;width:200%;height:200%;left:-50%;top:-50%;background-image:radial-gradient(1.2px 1.2px at 40px 60px, color-mix(in srgb, var(--accent) 50%, transparent), transparent), radial-gradient(1px 1px at 120px 140px, color-mix(in srgb, #8b5cf6 40%, transparent), transparent), radial-gradient(1.3px 1.3px at 200px 80px, color-mix(in srgb, #06b6d4 45%, transparent), transparent);background-size:280px 280px;animation:drift 160s linear infinite;will-change:transform}
+.particles i:nth-child(2){background-size:360px 360px;opacity:.4;animation-duration:210s;animation-direction:reverse;transform:translateZ(-60px)}
+.particles i:nth-child(3){background-size:440px 440px;opacity:.3;animation-duration:260s;transform:translateZ(-120px)}
+@keyframes drift{to{transform:translate3d(-200px,-300px,0)}}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            font-size: 18px;
-            line-height: 145%;
-            letter-spacing: 0.18px;
-            text-rendering: optimizelegibility;
-            -webkit-font-smoothing: antialiased;
-        }
+.skip{
+  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden
+}
+.skip:focus{
+  left:16px;top:12px;width:auto;height:auto;
+  background:var(--accent);color:var(--accent-ink);
+  padding:10px 14px;border-radius:12px;z-index:2000;text-decoration:none
+}
 
-        #root {
-            display: flex;
-            flex-direction: column;
-            width: 1126px;
-            max-width: 100%;
-            min-height: 100svh;
-            margin: 0 auto;
-            background-color: var(--bg-color);
-        }
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-        .app-content {
-            text-align: left;
-            flex: 1;
-            padding: 1.5rem 2rem 2.5rem;
-        }
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 6px 18px rgba(2,6,23,.06);
+  transform:translateZ(20px);
+  will-change:transform;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s
+}
+.site-header.scrolled{
+  transform:translateZ(8px);
+  box-shadow:0 14px 36px rgba(2,6,23,.14), 0 6px 14px rgba(2,6,23,.08)
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;min-height:72px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none
+}
+.logo-icon{font-size:30px;color:var(--accent)}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-size:18px;letter-spacing:.2px}
+.brand-text em{font-style:normal;font-size:12px;color:var(--muted);margin-top:1px}
+.head-cta{display:flex;align-items:center;gap:8px}
+.head-link{
+  display:flex;align-items:center;gap:6px;min-height:44px;
+  padding:10px 12px;border-radius:12px;color:var(--text);text-decoration:none;border:1px solid transparent
+}
+.head-link:hover{background:var(--bg-elev);text-decoration:none}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:10px 18px;border-radius:14px;font-weight:600;
+  border:1px solid var(--border);background:var(--card);color:var(--text);
+  text-decoration:none;transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s, filter .18s;box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(0,0,0,.05);white-space:nowrap;
+  transform:translateZ(0);position:relative;will-change:transform
+}
+.btn:hover{transform:translateY(-6px) rotateX(3deg) rotateY(-1.5deg) translateZ(6px);text-decoration:none;box-shadow:0 18px 36px rgba(2,6,23,.18), 0 8px 16px rgba(2,6,23,.12), inset 0 1px 0 rgba(255,255,255,.12)}
+.btn:active{transform:translateY(2px) rotateX(0) rotateY(0) translateZ(-10px);box-shadow:var(--depth-1), inset 0 2px 5px rgba(0,0,0,.18)}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);box-shadow:0 10px 20px color-mix(in srgb, var(--accent) 30%, transparent), 0 3px 6px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 1px 0 rgba(255,255,255,.22), inset 0 -2px 4px rgba(0,0,0,.18)}
+.btn-primary:hover{filter:brightness(.97);box-shadow:0 20px 40px color-mix(in srgb, var(--accent) 38%, transparent), 0 10px 20px color-mix(in srgb, var(--accent) 28%, transparent), inset 0 1px 0 rgba(255,255,255,.24)}
+.btn-primary:active{box-shadow:0 4px 10px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 2px 4px rgba(0,0,0,.25)}
+.btn-secondary{background:var(--bg-elev)}
+.btn-lg{padding:14px 24px;font-size:17px;min-height:52px;border-radius:16px}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;line-height:1}
 
-        @media (max-width: 1024px) {
-            body { font-size: 16px; }
-            .app-content { padding: 1.25rem 1.5rem 2rem; }
-        }
+/* Hero */
+.hero{padding:88px 0 64px;text-align:center;position:relative;isolation:isolate;transform-style:preserve-3d}
+.hero::before{
+  content:"";position:absolute;inset:-20% -10% 0 -10%;
+  background:
+    radial-gradient(900px 420px at 50% -10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%),
+    radial-gradient(700px 340px at 85% 0%, color-mix(in srgb, #8b5cf6 16%, transparent), transparent 60%),
+    radial-gradient(600px 300px at 15% 5%, color-mix(in srgb, #06b6d4 14%, transparent), transparent 60%);
+  transform:translateZ(-40px);
+  z-index:-1;pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;inset:-30% -15% 10% -15%;
+  background:
+    radial-gradient(600px 280px at 30% 10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
+    radial-gradient(500px 240px at 70% 5%, color-mix(in srgb, #8b5cf6 12%, transparent), transparent 60%);
+  transform:translateZ(-80px);
+  z-index:-2;pointer-events:none;
+  opacity:.8
+}
+.eyebrow{
+  display:inline-block;background:var(--bg-elev);border:1px solid var(--border);
+  padding:6px 12px;border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:16px;
+  box-shadow:var(--depth-1);transform:translateZ(10px)
+}
+h1{font-size:clamp(38px,6.2vw,64px);line-height:1.04;margin:0 0 14px;letter-spacing:-.02em;transform:translateZ(50px);will-change:transform}
+.lead{font-size:clamp(17px,2.3vw,20px);color:var(--muted);max-width:740px;margin:0 auto 28px;transform:translateZ(30px);will-change:transform}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;transform:translateZ(40px);will-change:transform}
+.trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 10px;transform-style:preserve-3d}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;padding:8px 12px;
+  border:1px solid var(--border);border-radius:999px;background:var(--card);
+  font-size:14px;color:var(--muted);box-shadow:var(--depth-1);
+  animation:floatBadge 4s ease-in-out infinite;will-change:transform;transform:translateZ(4px)
+}
+.badge:nth-child(1){animation-delay:0s}
+.badge:nth-child(2){animation-delay:.3s}
+.badge:nth-child(3){animation-delay:.6s}
+.badge:nth-child(4){animation-delay:.9s}
+.badge:nth-child(5){animation-delay:1.2s}
+@keyframes floatBadge{0%,100%{transform:translateY(0) translateZ(4px)}50%{transform:translateY(-6px) translateZ(12px)}}
+.badge .material-symbols-outlined{font-size:18px;color:var(--accent)}
+.social-proof{font-size:14px;color:var(--muted);transform:translateZ(20px)}
 
-        h1 {
-            font-size: 56px;
-            letter-spacing: -1.68px;
-            margin: 32px 0 20px;
-            font-weight: 700;
-            color: var(--heading-color);
-            line-height: 1.1;
-        }
-        h2 {
-            font-size: 24px;
-            letter-spacing: -0.24px;
-            margin: 0 0 8px;
-            line-height: 118%;
-            font-weight: 600;
-            color: var(--heading-color);
-        }
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--heading-color);
-        }
-        p { margin-bottom: 1rem; }
-        a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
-        a:hover { opacity: 0.8; }
+/* Sections */
+.section{padding:72px 0}
+.section.alt{background:var(--bg-elev);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.section h2{font-size:clamp(28px,4vw,40px);margin:0 0 12px;letter-spacing:-.01em;text-align:center}
+.section-intro{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 40px}
+.grid{display:grid;gap:20px}
+.services-grid{grid-template-columns:1fr;perspective:1000px}
+@media(min-width:720px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1020px){.services-grid{grid-template-columns:repeat(3,1fr)}}
 
-        button, .btn {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.8rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: inherit;
-        }
-        button:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-            box-shadow: 0 8px 20px rgba(59,130,246,0.25);
-        }
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--depth-2);transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s cubic-bezier(.2,.7,.2,1);
+  transform-style:preserve-3d;will-change:transform
+}
+.card:hover{transform:translateY(-8px) rotateX(2deg) rotateY(-2deg) translateZ(8px);box-shadow:var(--depth-3)}
+.card-icon{
+  width:48px;height:48px;display:grid;place-items:center;
+  background:color-mix(in srgb, var(--accent) 14%, transparent);
+  color:var(--accent);border-radius:14px;margin-bottom:14px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.15), inset 0 -2px 4px rgba(0,0,0,.08);
+  transform:translateZ(40px)
+}
+.card-icon .material-symbols-outlined{font-size:26px;text-shadow:0 1px 0 rgba(0,0,0,.18),0 2px 0 rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.16);transform:translateZ(8px)}
+.card h3{margin:0 0 6px;font-size:20px;transform:translateZ(30px)}
+.card p{margin:0 0 12px;color:var(--muted);transform:translateZ(20px)}
+.card ul{margin:0;padding-left:18px;transform:translateZ(20px)}
+.card li{margin:5px 0}
 
-        .grid-2, .grid-3 {
-            display: grid;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .grid-3 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-        .grid-2 { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+/* Why */
+.four{grid-template-columns:1fr;perspective:1000px}
+@media(min-width:700px){.four{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.four{grid-template-columns:repeat(4,1fr)}}
+.why{text-align:center;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--depth-2);transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s;transform-style:preserve-3d;will-change:transform}
+.why:hover{transform:translateY(-6px) rotateY(8deg) rotateX(2deg) translateZ(10px);box-shadow:var(--depth-3)}
+.why .material-symbols-outlined{font-size:32px;color:var(--accent);transform:translateZ(30px)}
+.why h3{margin:10px 0 6px;font-size:18px;transform:translateZ(24px)}
+.why p{margin:0;color:var(--muted);font-size:15px;transform:translateZ(18px)}
 
-        .card {
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 1.8rem;
-            transition: all 0.2s ease;
-            box-shadow: var(--card-shadow);
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent-border); }
+/* How */
+.steps{display:grid;gap:18px;margin-top:32px;perspective:1000px}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center;position:relative;box-shadow:var(--depth-2);transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s;transform-style:preserve-3d;will-change:transform}
+.step:hover{transform:translateY(-6px) rotateX(2deg) rotateY(-1deg) translateZ(8px);box-shadow:var(--depth-3)}
+.step .num{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%) translateZ(30px);
+  background:var(--accent);color:var(--accent-ink);width:30px;height:30px;
+  border-radius:999px;display:grid;place-items:center;font-weight:700;font-size:14px;
+  box-shadow:0 4px 8px color-mix(in srgb, var(--accent) 40%, transparent), inset 0 1px 0 rgba(255,255,255,.3)
+}
+.step .material-symbols-outlined{font-size:30px;color:var(--accent);margin:8px 0;transform:translateZ(28px)}
+.step h3{margin:6px 0 4px;transform:translateZ(22px)}
+.step p{margin:0;color:var(--muted);transform:translateZ(16px)}
+.how-cta{text-align:center;margin-top:28px}
 
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-        .service-icon .material-icons { font-size: 2.5rem; }
+/* Steel highlight */
+.steel{padding:44px 0;perspective:1000px}
+.steel-inner{
+  display:flex;flex-direction:column;gap:18px;align-items:flex-start;
+  background:var(--card);border-radius:var(--radius);padding:28px;
+  position:relative;box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 2px rgba(0,0,0,.06);border:1px solid transparent;
+  transform-style:preserve-3d;transition:transform .4s, box-shadow .4s;will-change:transform;overflow:hidden
+}
+.steel-inner:hover{transform:translateY(-4px) rotateX(1deg) rotateY(-1deg);box-shadow:var(--depth-3), inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 2px rgba(0,0,0,.08)}
+.steel-inner::before{
+  content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;
+  background:linear-gradient(135deg,var(--accent),#8b5cf6 50%,#06b6d4);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none
+}
+.steel-inner::after{
+  content:"";position:absolute;top:-50%;left:-150%;width:60%;height:200%;
+  background:linear-gradient(100deg, transparent 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 70%, transparent 100%);
+  transform:rotate(25deg) translateZ(30px);animation:sheen 6s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen
+}
+@keyframes sheen{0%{left:-150%}60%{left:150%}100%{left:150%}}
+.steel-inner .material-symbols-outlined{font-size:38px;color:var(--accent);filter:drop-shadow(0 2px 4px rgba(0,0,0,.2));transform:translateZ(40px)}
+.steel-inner h2{text-align:left;margin:0 0 6px;transform:translateZ(30px)}
+.steel-inner p{margin:0;color:var(--muted);max-width:60ch;transform:translateZ(20px)}
+.steel-inner .btn{transform:translateZ(25px)}
+@media(min-width:860px){.steel-inner{flex-direction:row;align-items:center}.steel-inner>div{flex:1}}
 
-        .service-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 1rem;
-        }
-        .service-list li {
-            padding: 0.3rem 0 0.3rem 1.2rem;
-            position: relative;
-        }
-        .service-list li::before {
-            content: "▹";
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-        }
+/* Areas */
+.areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0}
+.areas span{padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:999px;font-size:14px;box-shadow:var(--depth-1);transform:translateZ(2px)}
+.areas-note{text-align:center;color:var(--muted);font-size:14px}
 
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-            margin: 1rem 0;
-        }
-        .badge {
-            background: var(--accent-bg);
-            border: 1px solid var(--accent-border);
-            color: var(--accent);
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .badge .material-icons { font-size: 16px; }
+/* FAQ */
+.narrow{max-width:800px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;margin:12px 0;box-shadow:var(--depth-1);transition:box-shadow .2s, transform .2s;transform-style:preserve-3d}
+details[open]{box-shadow:var(--depth-2);transform:translateY(-2px) translateZ(4px)}
+summary{
+  cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  padding:18px 20px;min-height:44px
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"expand_more";font-family:"Material Symbols Outlined";font-size:22px;color:var(--muted);transition:.2s}
+details[open] summary::after{transform:rotate(180deg)}
+details p{color:var(--muted);margin:0;padding:0 20px 18px}
 
-        .value-prop-card { text-align: center; }
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-            display: inline-block;
-        }
-        .value-prop-card h3 { margin-top: 0.5rem; margin-bottom: 0.75rem; }
+/* CTA band */
+.cta-band{text-align:center;background:linear-gradient(180deg,transparent, color-mix(in srgb, var(--accent) 10%, transparent));border-top:1px solid var(--border)}
+.cta-band h2{margin-bottom:8px}
+.cta-band p{color:var(--muted);margin:0 0 22px}
 
-        .contact-info {
-            background: var(--code-bg);
-            border-radius: 20px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
+/* Footer */
+.site-footer{border-top:1px solid var(--border);background:var(--bg-elev);padding:52px 0 100px}
+.foot-grid{display:grid;gap:28px;grid-template-columns:1fr}
+@media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+.foot-grid h4{margin:0 0 8px;font-size:16px}
+.foot-grid p{margin:0;color:var(--muted)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            background: var(--bg-color);
-        }
+/* Mobile bar */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;padding:10px;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);
+  border-top:1px solid var(--border);box-shadow:0 -12px 28px rgba(2,6,23,.14), 0 -4px 10px rgba(2,6,23,.08);
+  transform:translateZ(30px)
+}
+.m-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;font-weight:700;text-decoration:none;border:1px solid var(--border);box-shadow:var(--depth-2), inset 0 1px 0 rgba(255,255,255,.1);transition:transform .15s;will-change:transform}
+.m-btn:active{transform:translateY(1px) translateZ(-6px)}
+.m-btn.call{background:var(--card);color:var(--text)}
+.m-btn.wa{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+@media(min-width:820px){.mobile-bar{display:none}.site-footer{padding-bottom:56px}}
 
-        .hero-section { text-align: center; margin-bottom: 2rem; }
-        .section-title { text-align: center; margin-bottom: 2rem; }
-        .inline-highlight { color: var(--accent); font-weight: 600; }
+/* Back to top */
+.top-btn{
+  position:fixed;right:18px;bottom:88px;z-index:70;width:48px;height:48px;border-radius:14px;
+  display:grid;place-items:center;background:var(--card);border:1px solid var(--border);
+  box-shadow:var(--depth-2);color:var(--text);cursor:pointer;transition:transform .2s, box-shadow .2s;will-change:transform
+}
+.top-btn:hover{transform:translateY(-2px) translateZ(4px);box-shadow:var(--depth-3)}
+.top-btn[hidden]{display:none}
+@media(min-width:820px){.top-btn{bottom:24px}}
 
-        .inline-icon {
-            font-size: 1.2rem;
-            vertical-align: middle;
-            margin-right: 4px;
-        }
-        .material-icons.btn-icon { font-size: 1.2rem; }
+.hide-sm{display:none}
+@media(min-width:520px){.hide-sm{display:inline}}
+</style>
 
-        .steel-highlight {
-            background: linear-gradient(135deg, var(--accent-bg) 0%, var(--bg-color) 100%);
-            border-left: 5px solid var(--accent);
-            text-align: center;
-            margin: 2rem 0 1rem;
-        }
-        .steel-highlight .material-icons {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: var(--accent);
-            color: white;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
-            border: none;
-            padding: 0;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
-        }
-        .back-to-top.visible { opacity: 1; visibility: visible; }
-        .back-to-top:hover {
-            transform: translateY(-4px);
-            background-color: var(--accent-dark);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-        }
-
-        .bottom-cta {
-            text-align: center;
-            background: var(--accent-bg);
-            border-radius: 32px;
-            padding: 2rem;
-            margin: 2rem 0 0.5rem;
-            border: 1px solid var(--accent-border);
-        }
-        .bottom-cta h3 { font-size: 1.8rem; margin-bottom: 0.75rem; }
-        .bottom-cta p { max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
-
-        @media (max-width: 680px) {
-            h1 { font-size: 36px; margin: 20px 0; }
-            h2 { font-size: 20px; }
-            .card { padding: 1.2rem; }
-            .app-content { padding: 1rem 1.2rem 1.8rem; }
-            .value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-            .back-to-top { bottom: 1.5rem; right: 1.5rem; width: 42px; height: 42px; }
-        }
-    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","HomeAndConstructionBusiness"],
+  "name": "The Nitty Gritty Handyman",
+  "description": "Professional maintenance, custom steelwork, fencing and installations - serving Johannesburg and Gauteng",
+  "telephone": "+27720438903",
+  "email": "info@nittygrittyhandyman.co.za",
+  "url": "https://nittygrittyhandyman.co.za",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Gauteng"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}
+  ],
+  "sameAs": []
+}
+</script>
 </head>
 <body>
-<div id="root">
-    <main class="app-content">
+<div class="particles" aria-hidden="true"><i></i><i></i></div>
+<a href="#main" class="skip">Skip to content</a>
 
-        <!-- Hero -->
-        <div class="hero-section">
-            <h1>The Nitty Gritty Handyman</h1>
-            <p style="font-size:1.2rem; max-width:800px; margin:0 auto 1.2rem;">
-                Professional maintenance, custom metalwork, fencing &amp; installations — serving <span class="inline-highlight">Johannesburg &amp; Gauteng</span>.
-            </p>
-            <div class="badge-container" style="justify-content:center;">
-                <span class="badge">Serving Johannesburg &amp; Gauteng</span>
-                <span class="badge">Quality Work</span>
-                <span class="badge">Fair Pricing</span>
-                <span class="badge">Reliable &amp; On Time</span>
-                <span class="badge">Free Quotes</span>
-            </div>
-            <button onclick="openWhatsApp()" style="margin-top:1rem;">
-                <span class="material-icons btn-icon">chat</span> Get your free quote →
-            </button>
-        </div>
+<header class="site-header" role="banner">
+  <div class="container head-inner">
+    <a href="#" class="brand" aria-label="The Nitty Gritty Handyman home">
+      <span class="material-symbols-outlined logo-icon" aria-hidden="true">construction</span>
+      <span class="brand-text">
+        <strong>The Nitty Gritty</strong>
+        <em>Handyman</em>
+      </span>
+    </a>
+    <nav class="head-cta" aria-label="Contact">
+      <a href="tel:+27720438903" class="head-link" aria-label="Call +27 72 043 8903">
+        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+        <span class="hide-sm">+27 72 043 8903</span>
+      </a>
+      <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="btn btn-primary" aria-label="Get free quote on WhatsApp">
+        <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+        WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
 
-        <!-- Value Props -->
-        <div class="section-title">
-            <h2>Why choose us?</h2>
-            <p>Our core promises to every client across Johannesburg &amp; Gauteng</p>
-        </div>
-        <div class="grid-3">
-            <div class="card value-prop-card">
-                <i class="fas fa-medal value-icon"></i>
-                <h3>Quality Work</h3>
-                <p>Every job done with pride and precision. Craftsmanship &amp; attention to detail guaranteed.</p>
-            </div>
-            <div class="card value-prop-card">
-                <i class="fas fa-handshake value-icon"></i>
-                <h3>Reliable</h3>
-                <p>We show up on time, every time. Professional and trustworthy service delivery.</p>
-            </div>
-            <div class="card value-prop-card">
-                <i class="fas fa-tag value-icon"></i>
-                <h3>Fair Pricing</h3>
-                <p>Transparent pricing model, no hidden surprises. Free quotes offered to all customers.</p>
-            </div>
-            <div class="card value-prop-card">
-                <i class="fas fa-briefcase value-icon"></i>
-                <h3>Experienced</h3>
-                <p>Years of hands-on trade expertise. Skilled workforce with proven track record.</p>
-            </div>
-        </div>
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="eyebrow">Johannesburg & Gauteng</div>
+      <h1 id="hero-title">The Nitty Gritty Handyman</h1>
+      <p class="lead">Professional maintenance, custom steelwork, fencing and installations - done right, on time, every time.</p>
+      
+      <div class="hero-ctas">
+        <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="btn btn-primary btn-lg">
+          <span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>
+          Get Free Quote on WhatsApp
+        </a>
+        <a href="tel:+27720438903" class="btn btn-secondary btn-lg">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          Call Now
+        </a>
+      </div>
 
-        <!-- Services Highlights (first 4) -->
-        <div class="section-title">
-            <h2>Services we excel at</h2>
-            <p>Comprehensive solutions — residential &amp; commercial</p>
-        </div>
-        <div class="grid-2">
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">build</span></div>
-                <h3>General Maintenance &amp; Repairs</h3>
-                <p>Indoor &amp; outdoor maintenance for homes and offices — from leaky taps to broken doors, we handle it all.</p>
-                <ul class="service-list">
-                    <li>Plumbing repairs</li>
-                    <li>Doors &amp; Windows work</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">handyman</span></div>
-                <h3>Custom Steel &amp; Stainless Steel Work</h3>
-                <p>Precision fabrication &amp; custom metalwork built to your specifications. Bespoke projects with expert welding.</p>
-                <ul class="service-list">
-                    <li>Fabrication</li>
-                    <li>Welding</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">fence</span></div>
-                <h3>Fencing</h3>
-                <p>Full fencing installations for residential &amp; commercial properties. Professional security solutions.</p>
-                <ul class="service-list">
-                    <li>Palisade fencing</li>
-                    <li>Concrete Poles installation</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">plumbing</span></div>
-                <h3>Installations</h3>
-                <p>Professional fixture &amp; structure installation — done right the first time.</p>
-                <ul class="service-list">
-                    <li>Fixtures installation</li>
-                    <li>Structures assembly</li>
-                </ul>
-            </div>
-        </div>
+      <div class="trust" role="list" aria-label="Trust badges">
+        <div class="badge" role="listitem"><span class="material-symbols-outlined" aria-hidden="true">verified</span>Free Quotes</div>
+        <div class="badge" role="listitem"><span class="material-symbols-outlined" aria-hidden="true">distance</span>No Call-Out Fee in JHB</div>
+        <div class="badge" role="listitem"><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>Quality Workmanship</div>
+        <div class="badge" role="listitem"><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Reliable & On Time</div>
+        <div class="badge" role="listitem"><span class="material-symbols-outlined" aria-hidden="true">apartment</span>Residential & Commercial</div>
+      </div>
+      <p class="social-proof">Rated 4.9/5 • 120+ happy clients across Gauteng • Fully equipped team</p>
+    </div>
+  </section>
 
-        <!-- All Services -->
-        <div class="section-title">
-            <h2>All Services</h2>
-            <p>Expert craftsmanship across six core categories</p>
-        </div>
-        <div class="grid-2">
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">build</span></div>
-                <h3>General Maintenance &amp; Repairs</h3>
-                <p>Indoor &amp; outdoor maintenance for homes and offices — from leaky taps to broken doors, we handle it all.</p>
-                <ul class="service-list">
-                    <li>Plumbing repairs</li>
-                    <li>Doors &amp; Windows work</li>
-                    <li>Tiling services</li>
-                    <li>Painting services</li>
-                </ul>
-                <div class="badge" style="display:inline-flex; margin-top:0.6rem;">From leaky taps to broken doors, we handle it all</div>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">handyman</span></div>
-                <h3>Custom Steel &amp; Stainless Steel Work</h3>
-                <p>Precision fabrication &amp; custom metalwork built to your specifications. Bespoke projects with expert welding.</p>
-                <ul class="service-list">
-                    <li>Fabrication</li>
-                    <li>Welding</li>
-                    <li>Stainless Steel work</li>
-                    <li>Custom Builds (staircases, gates, braai stands, frames)</li>
-                </ul>
-                <p style="margin-top:0.5rem; font-style:italic; color:var(--accent);">Staircases, gates, braai stands, custom steelwork</p>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">fence</span></div>
-                <h3>Fencing</h3>
-                <p>Full fencing installations for residential &amp; commercial properties. Professional security solutions.</p>
-                <ul class="service-list">
-                    <li>Palisade fencing</li>
-                    <li>Concrete Poles installation</li>
-                    <li>Security Fencing</li>
-                    <li>Boundary Walls</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">plumbing</span></div>
-                <h3>Installations</h3>
-                <p>Professional fixture &amp; structure installation — done right the first time.</p>
-                <ul class="service-list">
-                    <li>Fixtures installation</li>
-                    <li>Structures assembly</li>
-                    <li>Fittings &amp; hardware installation</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">home_repair_service</span></div>
-                <h3>Home &amp; Office Repairs</h3>
-                <p>Comprehensive repair services for residential &amp; commercial spaces. No job too small, emergency repairs available.</p>
-                <ul class="service-list">
-                    <li>Residential repairs</li>
-                    <li>Commercial repairs</li>
-                    <li>Emergency Repairs</li>
-                    <li>Renovations</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="service-icon"><span class="material-icons">grass</span></div>
-                <h3>Outdoor Structures</h3>
-                <p>Durable outdoor features designed to enhance your property and withstand the elements.</p>
-                <ul class="service-list">
-                    <li>Pergolas</li>
-                    <li>Carports</li>
-                    <li>Stoeps (covered patios)</li>
-                    <li>Paving</li>
-                </ul>
-            </div>
-        </div>
+  <!-- Services -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="container">
+      <h2 id="services-title">Services</h2>
+      <p class="section-intro">One team for all your repairs, installations, and custom builds.</p>
+      
+      <div class="grid services-grid">
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">handyman</span></div>
+          <h3>General Maintenance & Repairs</h3>
+          <p>Everyday fixes handled quickly and neatly.</p>
+          <ul>
+            <li>Plumbing repairs</li>
+            <li>Doors and windows</li>
+            <li>Tiling</li>
+            <li>Painting</li>
+          </ul>
+        </article>
 
-        <div class="badge-container" style="justify-content:center; margin:1rem 0;">
-            <span class="badge"><span class="material-icons">check_circle</span> Free Quotes</span>
-            <span class="badge"><span class="material-icons">handyman</span> Professional Installations</span>
-            <span class="badge"><span class="material-icons">hourglass_empty</span> No Job Too Small</span>
-            <span class="badge"><span class="material-icons">precision_manufacturing</span> Custom Builds</span>
-        </div>
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">manufacturing</span></div>
+          <h3>Custom Steel & Stainless Steel</h3>
+          <p>Specialist fabrication for home and business.</p>
+          <ul>
+            <li>Fabrication & welding</li>
+            <li>Staircases & balustrades</li>
+            <li>Gates & security</li>
+            <li>Braai stands</li>
+          </ul>
+        </article>
 
-        <!-- About -->
-        <div class="section-title" style="margin-top:2rem;">
-            <h2>About The Nitty Gritty Handyman</h2>
-            <p>Dedicated to quality, reliability, and fair service since day one.</p>
-        </div>
-        <div class="card" style="margin-bottom:2rem;">
-            <h3><span class="material-icons inline-icon">location_on</span> Locally rooted in Gauteng</h3>
-            <p>We are a Johannesburg-based handyman and custom metalwork business serving residential and commercial clients across Gauteng. From small household fixes to large-scale steel fabrication, we bring precision, integrity, and a can-do attitude to every project.</p>
-            <p><strong>Our mission:</strong> To provide world-class maintenance, repair, and custom fabrication with transparent pricing and unmatched reliability — ensuring every client feels like a priority.</p>
-        </div>
-        <div class="grid-2">
-            <div class="card">
-                <h3><span class="material-icons inline-icon">lightbulb</span> Our Philosophy</h3>
-                <p>"No job too small" — we treat every task with the same level of dedication. Whether it's a leaky faucet or a custom steel staircase, we take pride in delivering <strong>Quality Work</strong> that lasts.</p>
-                <p>
-                    <span class="material-icons inline-icon">check</span> Free quotes &bull;
-                    <span class="material-icons inline-icon">schedule</span> Punctuality &bull;
-                    <span class="material-icons inline-icon">price_check</span> Transparent pricing
-                </p>
-            </div>
-            <div class="card">
-                <h3><span class="material-icons inline-icon">military_tech</span> Expertise &amp; Certifications</h3>
-                <p>Years of hands-on experience in welding, fabrication, general maintenance, fencing, and installations. Our skilled team stays updated with best practices to serve Johannesburg and Gauteng effectively.</p>
-                <p><span class="material-icons inline-icon">build</span> Specialties: Custom steelwork, stainless steel, palisade fencing, outdoor structures, and emergency repairs.</p>
-            </div>
-        </div>
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">fence</span></div>
+          <h3>Fencing</h3>
+          <p>Secure, straight, and built to last.</p>
+          <ul>
+            <li>Palisade fencing</li>
+            <li>Concrete poles</li>
+            <li>Security fencing</li>
+            <li>Boundary walls</li>
+          </ul>
+        </article>
 
-        <!-- Geographic info -->
-        <div class="contact-info" style="text-align:center;">
-            <h3><span class="material-icons inline-icon">public</span> Serving Johannesburg &amp; Gauteng Province</h3>
-            <p>From Sandton to Soweto, Pretoria to the East Rand — we cover the entire region with prompt, professional service. Contact us for a free, no-obligation quote today.</p>
-            <div class="badge-container" style="justify-content:center;">
-                <span class="badge"><span class="material-icons">rocket_launch</span> Reliable &amp; On Time</span>
-                <span class="badge"><span class="material-icons">attach_money</span> Fair Pricing</span>
-                <span class="badge"><span class="material-icons">engineering</span> Experienced Team</span>
-            </div>
-        </div>
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">home_repair_service</span></div>
+          <h3>Installations</h3>
+          <p>Fixtures and fittings installed correctly.</p>
+          <ul>
+            <li>Fixtures & fittings</li>
+            <li>Structures & shelving</li>
+            <li>TV & wall mounting</li>
+            <li>Flat-pack assembly</li>
+          </ul>
+        </article>
 
-        <!-- Steel highlight -->
-        <div class="steel-highlight card">
-            <span class="material-icons">handyman</span>
-            <h3>Premium Custom Steel &amp; Stainless Steel Work</h3>
-            <p>From staircases and security gates to braai stands and industrial frames — we fabricate exactly what you need. Our expert welders deliver precision, durability, and beautiful finishes.</p>
-            <div class="badge-container" style="justify-content:center;">
-                <span class="badge">Bespoke Designs</span>
-                <span class="badge">On-site Welding</span>
-                <span class="badge">Structural Steel</span>
-            </div>
-        </div>
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">business</span></div>
+          <h3>Home & Office Repairs</h3>
+          <p>Fast response for homes and workplaces.</p>
+          <ul>
+            <li>Residential repairs</li>
+            <li>Commercial maintenance</li>
+            <li>Emergency call-outs</li>
+            <li>Small renovations</li>
+          </ul>
+        </article>
 
-        <!-- Bottom CTA -->
-        <div class="bottom-cta">
-            <h3>Ready to get started?</h3>
-            <p>Request your free, no-obligation quote today. We respond quickly and serve all of Gauteng.</p>
-            <button onclick="openWhatsApp()" style="margin-top:0.5rem;">
-                <span class="material-icons btn-icon">chat</span> Get your free quote →
-            </button>
-        </div>
+        <article class="card service">
+          <div class="card-icon"><span class="material-symbols-outlined" aria-hidden="true">yard</span></div>
+          <h3>Outdoor Structures</h3>
+          <p>Strong, neat outdoor builds.</p>
+          <ul>
+            <li>Pergolas</li>
+            <li>Carports</li>
+            <li>Stoeps & decking</li>
+            <li>Paving</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> The Nitty Gritty Handyman — Professional handyman &amp; custom metalwork | Johannesburg &amp; Gauteng, South Africa</p>
-        <p style="margin-top:0.5rem;"><span class="material-icons inline-icon">location_on</span> Serving Gauteng Province &bull; Free quotes &bull; Reliable &amp; on time &bull; No job too small</p>
-        <div class="badge-container" style="justify-content:center; margin-top:0.8rem;">
-            <span class="badge"><span class="material-icons">call</span> +27 72 043 8903</span>
-            <span class="badge"><span class="material-icons">email</span> info@nittygrittyhandyman.co.za</span>
+  <!-- Why Choose -->
+  <section id="why" class="section alt" aria-labelledby="why-title">
+    <div class="container">
+      <h2 id="why-title">Why Choose Us</h2>
+      <div class="grid four">
+        <div class="why">
+          <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+          <h3>Quality Work</h3>
+          <p>Neat finishes, solid materials, attention to detail on every job.</p>
         </div>
-        <p style="margin-top:1.5rem; font-size:0.75rem; opacity:0.7;">
-            Website by <a href="https://dennisys.co.za" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:underline;">Dennisys (Pty) Ltd</a>
-        </p>
-    </footer>
+        <div class="why">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          <h3>Reliable & On Time</h3>
+          <p>We arrive when we say we will and finish as promised.</p>
+        </div>
+        <div class="why">
+          <span class="material-symbols-outlined" aria-hidden="true">payments</span>
+          <h3>Fair Pricing</h3>
+          <p>Clear, upfront quotes. No surprises. Free quotes in JHB.</p>
+        </div>
+        <div class="why">
+          <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
+          <h3>Experienced Team</h3>
+          <p>Years of hands-on experience across trades and steelwork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          <h3>WhatsApp or Call</h3>
+          <p>Tell us what needs fixing or building. Send photos for speed.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
+          <h3>Free Quote</h3>
+          <p>We assess and send a clear, fair price - no call-out fee in JHB.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <span class="material-symbols-outlined" aria-hidden="true">construction</span>
+          <h3>We Fix It</h3>
+          <p>Professional job done right, with full clean-up after.</p>
+        </div>
+      </div>
+      <div class="how-cta">
+        <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="btn btn-primary">Get Your Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steel highlight -->
+  <section class="steel" aria-labelledby="steel-title">
+    <div class="container">
+      <div class="steel-inner">
+        <span class="material-symbols-outlined" aria-hidden="true">welding</span>
+        <div>
+          <h2 id="steel-title">Custom Steel & Stainless Specialists</h2>
+          <p>From designer staircases and security gates to braai stands and balustrades - we fabricate and weld on-site or in workshop. Strong welds, clean finishes, powder-coating available.</p>
+        </div>
+        <a href="https://wa.me/27720438903?text=Hi,%20I%20need%20custom%20steelwork" class="btn btn-secondary">Discuss Steelwork</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section id="areas" class="section alt" aria-labelledby="areas-title">
+    <div class="container">
+      <h2 id="areas-title">Service Area</h2>
+      <p class="section-intro">Based in Johannesburg, serving greater Gauteng daily.</p>
+      <div class="areas" aria-label="Areas served">
+        <span>Sandton</span><span>Randburg</span><span>Fourways</span><span>Midrand</span><span>Roodepoort</span>
+        <span>Northcliff</span><span>Parkhurst</span><span>Rosebank</span><span>Melville</span><span>Bryanston</span>
+        <span>Hyde Park</span><span>Greenside</span><span>Linden</span><span>Auckland Park</span><span>Johannesburg CBD</span>
+        <span>Soweto</span><span>Alberton</span><span>Germiston</span><span>Bedfordview</span><span>Edenvale</span>
+        <span>Kempton Park</span><span>Benoni</span><span>Boksburg</span><span>Centurion</span><span>Pretoria East</span>
+      </div>
+      <p class="areas-note">Don't see your suburb? <a href="tel:+27720438903">Call us</a> - we travel across Gauteng.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section" aria-labelledby="faq-title">
+    <div class="container narrow">
+      <h2 id="faq-title">FAQ</h2>
+      
+      <details>
+        <summary>Do you charge a call-out fee in Johannesburg?</summary>
+        <p>No. Quotes are free with no call-out fee within Johannesburg. Outside JHB, a small travel fee may apply - we'll confirm upfront before booking.</p>
+      </details>
+      
+      <details>
+        <summary>What areas do you cover?</summary>
+        <p>We're based in Johannesburg and work across Gauteng including Sandton, Randburg, Midrand, Roodepoort, Pretoria, and the East Rand. For other areas, please WhatsApp us.</p>
+      </details>
+      
+      <details>
+        <summary>How quickly can you give me a quote?</summary>
+        <p>Most quotes are sent the same day via WhatsApp. Send photos and a brief description to <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE">+27 72 043 8903</a> for the fastest turnaround.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta-band" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Ready to get it fixed?</h2>
+      <p>Free quotes. No call-out fee in JHB. Professional, friendly service.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="btn btn-primary btn-lg">WhatsApp for Free Quote</a>
+        <a href="tel:+27720438903" class="btn btn-secondary btn-lg">Call +27 72 043 8903</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container foot-grid">
+    <div>
+      <strong>The Nitty Gritty Handyman</strong>
+      <p>Professional maintenance, custom steelwork, fencing and installations - serving Johannesburg and Gauteng.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>
+        <a href="tel:+27720438903">+27 72 043 8903</a><br>
+        <a href="mailto:info@nittygrittyhandyman.co.za">info@nittygrittyhandyman.co.za</a><br>
+        <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE">WhatsApp</a>
+      </p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Mon-Fri: 08:00-17:00<br>Sat: 08:00-13:00<br>Sun: Closed</p>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <p>© <span id="year"></span> The Nitty Gritty Handyman. All rights reserved.</p>
+    <p>Website by <a href="https://dennisys.co.za" target="_blank" rel="noopener">Dennisys</a></p>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="mobile-bar" role="navigation" aria-label="Quick contact">
+  <a href="tel:+27720438903" class="m-btn call"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call</a>
+  <a href="https://wa.me/27720438903?text=Hello%20The%20Nitty%20Gritty%20Handyman!%20I%20would%20like%20a%20FREE%20QUOTE" class="m-btn wa"><span class="material-symbols-outlined" aria-hidden="true">chat</span> WhatsApp</a>
 </div>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="scrollToTop()">
-    <span class="material-icons">arrow_upward</span>
+<button id="topBtn" class="top-btn" aria-label="Back to top" hidden>
+  <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
 </button>
 
 <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const topBtn = document.getElementById('topBtn');
+  const header = document.querySelector('.site-header');
+  
+  function onScroll(){
+    if (window.scrollY > 600) { topBtn.hidden = false; } else { topBtn.hidden = true; }
+    if (window.scrollY > 20) { header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
-    const WHATSAPP_NUMBER = "27720438903";
-    const WHATSAPP_MESSAGE = encodeURIComponent("Hello The Nitty Gritty Handyman! I would like to request a FREE QUOTE for your handyman services (repairs, steelwork, fencing, installations, etc.). Please could you assist me? Thank you!");
-    const WHATSAPP_LINK = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + WHATSAPP_MESSAGE;
-
-    function openWhatsApp() {
-        window.open(WHATSAPP_LINK, '_blank', 'noopener,noreferrer');
-    }
-
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
+  // 3D scroll pop-in
+  const revealEls = document.querySelectorAll('.card, .why, .step, .steel-inner');
+  revealEls.forEach(el=>{
+    el.style.opacity = '0';
+    el.style.transform = 'perspective(1200px) translateZ(-100px) rotateX(20deg)';
+    el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+  });
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        el.style.opacity = '1';
+        el.style.transform = 'perspective(1200px) translateZ(0) rotateX(0)';
+        io.unobserve(el);
+      }
     });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Advanced 3D tilt for cards
+  document.querySelectorAll('.card').forEach(card=>{
+    const max = 12;
+    card.addEventListener('mousemove', (e)=>{
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      const cx = r.width/2;
+      const cy = r.height/2;
+      const ry = ((x - cx)/cx) * max;
+      const rx = ((cy - y)/cy) * max;
+      card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(20px)`;
+      const sx = -ry * 1.2;
+      const sy = rx * 1.2 + 14;
+      card.style.boxShadow = `${sx}px ${sy}px 36px rgba(2,6,23,.18), 0 4px 10px rgba(2,6,23,.1)`;
+    });
+    card.addEventListener('mouseleave', ()=>{
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+      card.style.boxShadow = '';
+    });
+  });
+
+  // Steel highlight 3D reaction
+  const steel = document.querySelector('.steel-inner');
+  if(steel){
+    steel.addEventListener('mousemove', (e)=>{
+      const r = steel.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      const cx = r.width/2;
+      const cy = r.height/2;
+      const ry = ((x - cx)/cx) * 6;
+      const rx = ((cy - y)/cy) * 6;
+      steel.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(6px)`;
+    });
+    steel.addEventListener('mouseleave', ()=>{
+      steel.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+    });
+  }
 </script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
 </body>
 </html>
